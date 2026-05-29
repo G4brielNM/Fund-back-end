@@ -13,7 +13,6 @@ public class media {
         }else{
             System.out.println("Aluno REPROVADO por média: " + media);
         }
-
         sc.close();
     }
 }
