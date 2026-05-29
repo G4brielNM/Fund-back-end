@@ -1,0 +1,62 @@
+# Sistema Acadêmico - Diagrama Mermaid
+
+```mermaid
+classDiagram
+
+    class Aluno {
+        +int id
+        +String nome
+        +String cpf
+        +String email
+        +int periodo
+        +fazerMatricula()
+        +assistirAula()
+    }
+
+    class Professor {
+        +String nome
+        +String disciplina
+        +int idade
+        +darAula()
+        +corrigirProva()
+    }
+
+    class Restaurante {
+        +String nome
+        +String endereco
+        +int capacidade
+        +abrir()
+        +fechar()
+    }
+
+    class Noticias {
+        +String titulo
+        +String categoria
+        +String autor
+        +publicar()
+        +editar()
+    }
+
+    class Biblioteca {
+        +String nome
+        +int quantidadeLivros
+        +String responsavel
+        +emprestarLivro()
+        +devolverLivro()
+    }
+
+    class Relatorios {
+        +String tipo
+        +String data
+        +gerarPDF()
+        +exportar()
+    }
+
+    Aluno --> Biblioteca : utiliza
+    Aluno --> Restaurante : frequenta
+    Aluno --> Noticias : visualiza
+    Professor --> Relatorios : gera
+    Biblioteca --> Relatorios : fornece dados
+    Noticias --> Relatorios : envia informacoes
+    Restaurante --> Relatorios : registra vendas
+```
